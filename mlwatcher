@@ -1,0 +1,5 @@
+#!/bin/sh
+# Fix for mac which has a 256 open file limit, 1048 is the legal maximum
+ulimit -n 1048
+# launch watcher
+node ./mlwatcher.js "$@"
